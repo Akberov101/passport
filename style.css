@@ -1,0 +1,621 @@
+header{
+    height: 90vh;
+    background: linear-gradient(#00000038,#00000024),url(img/hero1.jpg) center/cover;
+    padding: 40px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+nav ul a {
+    font: 400 14px arial;
+    transition: 0.4s;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+nav ul a :hover{
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.fa-sort-down{
+    font-size: 10px;
+}
+
+
+.dropdown-link{
+    position: relative;
+}
+
+nav li:hover .dropdown{
+    display: block;
+    max-height: 150px;
+    padding: 12px 10px;
+}
+
+.dropdown {
+    transition: .5s;
+    max-height: 0px;
+    overflow: hidden;
+    position: absolute;
+    width: 120px;
+    top: 80px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: block;
+    li{
+        a{
+            display: block;
+            color: #000;
+        }
+    }
+}
+
+
+.logo{
+    color: #fff;
+    font: 800 28px arial;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.active{
+    color: #ff7404 !important;
+}
+
+nav button{
+    background: #ff7404;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    line-height: 1;
+    font: 600 10px arial;
+    transition: .3s all ease;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+nav button:hover{
+    background: #fff;
+    color: #ff7404;
+}
+
+#services{
+    padding: 60px 0;    
+    background-color: #f8f9fa;
+    position: relative;
+    z-index: 2;
+}
+
+#services::before{
+    content: "";
+    position: absolute;
+    background-color: #f8f9fa;
+    z-index: -1;
+    width: 100%;
+    height: 200px;
+    bottom: 70%;
+    transform: skewY(-6deg);
+}
+
+#services::after{
+    content: "";
+    position: absolute;
+    background-color: #f8f9fa;
+    z-index: -1;
+    width: 100%;
+    height: 200px;
+    top: 70%;
+    transform: skewY(-6deg);
+}
+
+.all-services{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+.service-card{
+    width: 23%;
+}
+
+.service-card i {
+    color: #fff;
+    background-color: #ff7404;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    font-size: 32px;
+}
+
+.service-card h3{
+    font: 400 14px arial;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: #ff7404;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.service-card p{
+    font: 400 13px arial;
+    line-height: 1.8;
+    color: #868e96;
+}
+#restaurant{
+    padding: 200px 0;
+    height: 50vh;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.title-container{
+    margin: 0 auto;
+}
+
+.title{
+    position: relative;
+    padding-top: 30px;
+    z-index: 2;
+    text-transform: uppercase;
+    font: 800 45px arial;
+    text-align: center;
+}
+
+.title::before{
+    width: 80px;
+    height: 2px;
+    background: #ff7404;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.paragraph{
+    font: 400 12px arial;
+    color: #868e96;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.all-dishes{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+
+.food-image img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.food-col img{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.food-col img:nth-child(1){
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+#menu{
+    padding: 200px 0;
+    height: 50vh;
+    z-index: 2;
+}
+
+.all-dishes-slider{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0 160px 0;
+}
+
+.food-item{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.food-img img{
+    width: 390px;
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(70%);
+    transition: 0.4s;
+}
+
+.food-item:hover .food-img img{
+    scale: 1.2;
+}
+
+.food-content{
+    position: absolute;
+    top: 40%;
+    text-align: center;
+}
+
+.food-content span{
+    font: 700 16px arial;
+    color: #fff;
+    background: #ff7404;
+    padding: 25px 11px;
+    border-radius: 50%;
+    transition: .3s all ease;
+    border: 2px solid transparent;
+}
+
+.food-item:hover .food-content span{
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+   
+}
+
+.food-content h3{
+    color: #fff;
+    text-transform: uppercase;
+    font: 700 24px arial;
+    max-width: 500px;
+    margin: 34px auto;
+}
+#ourmenu{
+    margin-top: 120px;
+    padding: 60px 0;    
+    background-color: #f8f9fa;
+    position: relative;
+    z-index: 2;
+}
+
+
+#ourmenu::after{
+    content: "";
+    position: absolute;
+    background-color: #f8f9fa;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    top: 70%;
+    transform: skewY(-6deg);
+}
+
+.container-foods{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 60px 0;
+}
+
+.container-foods .food-item-content{
+    width: 180px;
+    height: 200px;
+    background-color: #fff;
+}
+
+.food-item-content{
+    padding: 20px 30px;
+}
+
+.food-item-content h4 {
+    font: 500 18px arial;
+    color: #000;
+    line-height: 1.2;
+}
+
+.food-item-content p {
+    font: 400 13px arial;
+    line-height: 1.8;
+    color: #868e96;
+    margin: 8px 0;
+}
+
+.food-item-content h5{
+    color: #ff7404;
+    font: 500 24px arial;
+    margin: 8px 0;
+}
+
+.food-item-image img{
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+}
+#testimonials{
+    
+    padding-top: 140px;
+    position: relative;
+    z-index: 2;
+}
+
+#testimonials h3{
+    margin-bottom: 48px;
+}
+
+.testimonial{
+    margin: 0 auto;
+    width: 450px;
+}
+
+.testimonial p {
+    font: 400 18px arial;
+    color: #000;
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.profile{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.profile img {
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.profile-about h6{
+    font: 500 14px arial;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+.profile-about span{
+    color: #cccccc;
+    font:400 10px arial;
+    line-height: 1.8;
+}
+#blog{
+    margin-top: 160px;
+    padding: 60px 0;
+    position: relative;
+    height: 40vh;
+    z-index: 2;
+    background-color: #f8f9fa;
+}
+
+#blog::before{
+    content: "";
+    position: absolute;
+    background-color: #f8f9fa;
+    z-index: -1;
+    width: 100%;
+    height: 200px;
+    bottom: 70%;
+    transform: skewY(-6deg);
+}
+
+#blog::after{
+    content: "";
+    position: absolute;
+    background-color: #f8f9fa;
+    z-index: -1;
+    width: 100%;
+    height: 520px;
+    bottom: -90%;
+    transform: skewY(-6deg);
+}
+
+.all-blogs{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 60px 0;
+}
+
+.blog{
+    width: 50%;
+}
+
+.blog img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.blog-desc{
+    padding: 20px 20px 30px 20px;
+    background-color: #fff;
+}
+
+.blog-desc h2{
+    transition: .3s all ease;
+    color: #ff7404;
+    font: 500 18px arial;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+.blog-desc h2:hover{
+    color: #b75100;
+}
+
+.blog-desc h5 {
+    font: 400 12px arial;
+    line-height: 1.8;
+    color: #999;
+    margin: 8px 0;
+}
+
+.blog-desc p {
+    font: 400 14px arial;
+    line-height: 1.8;
+    color: #868e96;
+    margin-bottom: 16px;
+}
+
+.blog-desc a {
+    padding: 8px 18px;
+    font: 500 10px arial;
+    outline: none;
+    background-color: #ff7404;
+    border-color: #ff7404;
+    line-height: 1.5;
+    color: #fff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.blog-desc a:hover{
+    background-color: #ff9037;
+    border-color: #ff9037;
+}
+#footer{
+    position: relative;
+    height: 100vh;
+    margin-top: 20px;
+    padding: 120px 0;
+    z-index: 2;
+}
+
+footer{
+    position: absolute;
+    bottom: -200px;
+    width: 100%;
+}
+
+.footer-subscribe{
+    text-align: center;
+}
+
+#all-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-subscribe h2 {
+    font: 600 14px arial;
+    text-transform: capitalize;
+}
+
+.footer-subscribe p {
+    font: 400 13px arial;
+    line-height: 1.8;
+    color: #868e96;
+    padding: 10px 0;
+}
+
+.footer-subscribe input{
+    padding: 6px 18px;
+    font: 500 16px arial;
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid #ced4da;
+    outline: none;
+    margin-right: 10px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.footer-subscribe input:focus{
+    border-color: #ff7404;
+}
+
+.footer-subscribe button{
+    background-color: #ff7404;
+    border-color: #ff7404;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: #fff;
+    border: 1px solid transparent;
+    font: 500 10px arial;
+    padding: 10px 12px;
+    line-height: 1.2;
+    margin-left: 10px;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.footer-subscribe button:hover{
+    border-color: #ff9037;
+    background: #ff9037;
+}
+
+::placeholder{
+    text-transform: capitalize;
+    font: 500 14px arial;
+    color: #868e96;
+}
+
+#all-footer{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+
+}
+
+.footer-icon{
+    margin-top: 50px;
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    color: #ff7404;
+    font-size: 12px;
+}
+.footer-content h2,.footer-hours h2,.footer-links h2,.contact-info{
+    font: 600 16px arial;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.contact-info{
+    margin-top: 50px;
+}
+.footer-hours p,.contact-info article{
+    font: 500 15px arial;
+}
+.contact-info article{
+    margin-bottom: 10px;
+}
+.contact-info address,a{
+    color: #868e96;
+    font: 500 15px arial;
+    margin-bottom: 20px;
+}
+.footer-hours span{
+    color: #868e96;
+}
+.footer-hours strong{
+    display: block;
+    margin-bottom: 10px;
+}
+.footer-content p{
+    color: #868e96;
+    font: 500 15px arial;
+    width: 330px;
+    line-height: 25px;
+}
+.footer-links a{
+    display: block;
+    color: #ff7404;
+    font: 500 16px arial;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
